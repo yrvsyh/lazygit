@@ -111,6 +111,7 @@ type KeybindingUniversalConfig struct {
 	Quit                         string `yaml:"quit"`
 	QuitAlt1                     string `yaml:"quit-alt1"`
 	Return                       string `yaml:"return"`
+	ReturnAlt                    string `yaml:"return-alt"`
 	QuitWithoutChangingDirectory string `yaml:"quitWithoutChangingDirectory"`
 	TogglePanel                  string `yaml:"togglePanel"`
 	PrevItem                     string `yaml:"prevItem"`
@@ -359,9 +360,10 @@ func GetDefaultConfig() *UserConfig {
 		QuitOnTopLevelReturn: false,
 		Keybinding: KeybindingConfig{
 			Universal: KeybindingUniversalConfig{
-				Quit:                         "q",
-				QuitAlt1:                     "<c-c>",
-				Return:                       "<esc>",
+				Quit:                         "<esc>",
+				QuitAlt1:                     "<esc>",
+				Return:                       "q",
+				ReturnAlt:                    "<c-c>",
 				QuitWithoutChangingDirectory: "Q",
 				TogglePanel:                  "<tab>",
 				PrevItem:                     "<up>",

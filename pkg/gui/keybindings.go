@@ -232,6 +232,12 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 			Handler:  gui.handleTopLevelReturn,
 		},
 		{
+			ViewName: "",
+			Key:      gui.getKey(config.Universal.ReturnAlt),
+			Modifier: gocui.ModNone,
+			Handler:  gui.handleTopLevelReturn,
+		},
+		{
 			ViewName:    "",
 			Key:         gui.getKey(config.Universal.OpenRecentRepos),
 			Handler:     gui.handleCreateRecentReposMenu,
